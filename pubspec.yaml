@@ -10,8 +10,12 @@ dependencies:
   auto_route: ^10.1.0+1
   flutter:
     sdk: flutter
+  flutter_bloc: ^9.1.1
   get_it: ^8.3.0
+  google_fonts: ^6.3.0
+  hydrated_bloc: ^10.1.1
   injectable: ^2.5.1
+  path_provider: ^2.1.5
 
 dev_dependencies:
   auto_route_generator: ^10.0.1
