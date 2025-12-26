@@ -8,6 +8,21 @@ abstract class AppTheme {
     typography: Typography.material2021(),
     colorScheme: AppColorScheme.light,
     textTheme: AppTextTheme.light,
+    navigationBarTheme: NavigationBarThemeData(
+      backgroundColor: AppColorScheme.light.surface,
+      indicatorColor: Colors.transparent,
+      labelBehavior: NavigationDestinationLabelBehavior.alwaysShow,
+      labelTextStyle: WidgetStateProperty.resolveWith((states) {
+        return AppTextTheme.light.labelMedium!.copyWith(
+          overflow: TextOverflow.ellipsis,
+          fontWeight: states.contains(WidgetState.selected) ? FontWeight.bold : null,
+        );
+      }),
+    ),
+    floatingActionButtonTheme: FloatingActionButtonThemeData(
+      backgroundColor: AppColorScheme.light.primary,
+      foregroundColor: AppColorScheme.light.surface,
+    ),
   );
 
   static ThemeData dark = ThemeData(
@@ -15,5 +30,20 @@ abstract class AppTheme {
     typography: Typography.material2021(),
     colorScheme: AppColorScheme.dark,
     textTheme: AppTextTheme.dark,
+    navigationBarTheme: NavigationBarThemeData(
+      backgroundColor: AppColorScheme.dark.surface,
+      indicatorColor: Colors.transparent,
+      labelBehavior: NavigationDestinationLabelBehavior.alwaysShow,
+      labelTextStyle: WidgetStateProperty.resolveWith((states) {
+        return AppTextTheme.dark.labelMedium!.copyWith(
+          overflow: TextOverflow.ellipsis,
+          fontWeight: states.contains(WidgetState.selected) ? FontWeight.bold : null,
+        );
+      }),
+    ),
+    floatingActionButtonTheme: FloatingActionButtonThemeData(
+      backgroundColor: AppColorScheme.dark.primary,
+      foregroundColor: AppColorScheme.dark.surface,
+    ),
   );
 }
