@@ -3,11 +3,11 @@ import 'package:injectable/injectable.dart';
 import 'package:spendly/app/router/app_router.gr.dart';
 
 @singleton
-class DashboardRoutes {
+class HomeRoutes {
   List<AutoRoute> get routes => [
         CustomRoute<void>(
-          path: 'dashboard',
-          page: DashboardRoute.page,
+          path: 'home',
+          page: HomeRoute.page,
           initial: true,
           transitionsBuilder: TransitionsBuilders.noTransition,
         ),

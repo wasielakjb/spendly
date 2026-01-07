@@ -12,7 +12,7 @@ class AppNavigationBar extends StatelessWidget {
   final PageRouteInfo<dynamic> current;
 
   List<PageRouteInfo<dynamic>> get _routes => const [
-        DashboardRoute(),
+        HomeRoute(),
         ExpensesRoute(),
         AnalyticsRoute(),
         SettingsRoute(),
